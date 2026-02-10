@@ -20,7 +20,7 @@ func (r *Registry) Register(tool Tool, handler ToolFunc) {
 	r.logger.Debug("Registered tool", "tool", tool.Name)
 }
 
-func (r *Registry) ListTool() []Tool {
+func (r *Registry) ListTools() []Tool {
 	tools := make([]Tool, 0, len(r.tools))
 	for _, tool := range r.tools {
 		tools = append(tools, tool)
